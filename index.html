@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="API documentation for the Eluna engine.">
-    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+    <meta name="description" content="API документация для Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, dragonflight, script, scripting, doc, docs, documentation">
 
     <title>Eluna API</title>
 
@@ -25,7 +25,7 @@
     <a href='index.html'><img src='static/eluna-logo.png' alt='Eluna Logo' width='100'></a>
     <div class="block">
         
-            <h2>All Classes</h2>
+            <h2>Все классы</h2>
             <a class="mod " href="Aura/index.html">Aura</a><a class="mod " href="BattleGround/index.html">BattleGround</a><a class="mod " href="Corpse/index.html">Corpse</a><a class="mod " href="Creature/index.html">Creature</a><a class="mod " href="ElunaQuery/index.html">ElunaQuery</a><a class="mod " href="GameObject/index.html">GameObject</a><a class="mod " href="Global/index.html">Global</a><a class="mod " href="Group/index.html">Group</a><a class="mod " href="Guild/index.html">Guild</a><a class="mod " href="Item/index.html">Item</a><a class="mod " href="Map/index.html">Map</a><a class="mod " href="Object/index.html">Object</a><a class="mod " href="Player/index.html">Player</a><a class="mod " href="Quest/index.html">Quest</a><a class="mod " href="Spell/index.html">Spell</a><a class="mod " href="Unit/index.html">Unit</a><a class="mod " href="Vehicle/index.html">Vehicle</a><a class="mod " href="WorldObject/index.html">WorldObject</a><a class="mod " href="WorldPacket/index.html">WorldPacket</a>
         
     </div>
@@ -36,7 +36,7 @@
         <div class="search-container">
             <input class="search-input" name="search"
                    autocomplete="off"
-                   placeholder="Click or press 'S' to search, '?' for more options..."
+                   placeholder="ЛКМ или нажмите 'S' чтобы искать, '?' для получения других опций..."
                    type="search">
         </div>
     </form>
@@ -44,7 +44,7 @@
 
 <section id='main' class="content mod">
     <h1 class='fqn'>
-        Eluna API Documentation
+        Документация Eluna API
         <span class='out-of-band'>
             <span id='render-detail'>
                 <a id="collapse-all" href="#">[-]</a>
@@ -56,52 +56,48 @@
     
     <div class='docblock'>
         <h1 id="the-eluna-engine-api" class='section-header'>
-            <a href="#the-eluna-engine-api">The Eluna Lua Engine&copy; API</a>
+            <a href="#the-eluna-engine-api">Eluna Lua Engine&copy; API</a>
         </h1>
         <p>
-            The Eluna Lua Engine&copy; API allows you to add your own Lua code to be executed when certain events (called "hooks") occur.
+            API Eluna Lua Engine&copy; позволяет добавлять свой собственный Lua-код, который будет выполняться при срабатывании определенных событий (так называемых "хуков").
         </p>
         <p>
-            Add a new in-game command, give life to creatures with new AI, or even light players who try to duel on fire!
-            If the hook exists, you can script it.
+            Добавьте новую игровую команду, дайте жизнь мобам с новым кастомным поведением или например подожгите игроков, пытающихся устроить дуэль!
+            Если хук существует, вы можете написать для него сценарий.
         </p>
 
         <h2 id="about-eluna" class='section-header'>
-            <a href="#about-eluna">About Eluna</a>
+            <a href="#about-eluna">О Eluna</a>
         </h2>
         <p>
-            Eluna is a <a href="http://www.lua.org/">Lua</a> engine for World of Warcraft emulators.
-            Eluna supports <a href="http://cmangos.net/">CMaNGOS</a>/<a href="https://www.getmangos.eu/home.php">MaNGOS</a>
-            and <a href="http://www.trinitycore.org/">TrinityCore</a>.
+            Eluna это <a href="http://www.lua.org/">Lua</a> интерпретатор для эмулятора World of Warcraft.
+            Eluna поддерживает <a href="https://github.com/KamiliaBlow/RoleplayCore">TrinityCore (только мой репозиторий)</a>.
         </p>
         <p>
-            To get Eluna, simply clone your favorite version of MaNGOS or Trinity from
-            <a href="https://github.com/ElunaLuaEngine">our Github account</a>.
-            Each fork there has Eluna already integrated, so you just need to compile and go!
-        </p>
-        <p>
-            Join our community <a href="https://discord.gg/bjkCVWqqfX">Discord</a> server to keep up with Eluna development and user provided support.
+            Чтобы получить Eluna, просто клонируйте репозиторий
+            <a href="https://github.com/KamiliaBlow/RoleplayCore">из МОЕГО аккаунта GitHub</a>.
+            В форке этого репозитория Eluna уже интегрирована, так что вам нужно просто скомпилировать ее и начать кодить!
         </p>
 
         <h2 id="tutorials-and-guides" class='section-header'>
-            <a href="#tutorials-and-guides">Tutorials & Guides</a>
+            <a href="#tutorials-and-guides">Туториалы & Гайды</a>
         </h2>
         <p>
-            We haven't written tutorials yet, but when we do, we'll put the links here.
+            Авторы еще не написали учебники, но когда они появятся, я размещу ссылки здесь.
         </p>
 
         <h2 id="about-this-documentation" class='section-header'>
-            <a href="#about-this-documentation">About this documentation</a>
+            <a href="#about-this-documentation">Об этой документации</a>
         </h2>
         <p>
-            The layout, CSS, and Javascript code for this documentation was borrowed from <a href="http://doc.rust-lang.org/">doc.rust-lang.org</a>.
+            Макет, CSS и код Javascript для этой документации были заимствованы из <a href="http://doc.rust-lang.org/">doc.rust-lang.org</a>.
         </p>
         <p>
-            The documentation generator was originally written by <a href="https://github.com/Patman64">Patman64</a> and is maintained by the Eluna team.
+            Генератор документации был первоначально написан <a href="https://github.com/Patman64">Patman64</a> и поддерживается командой Eluna.
         </p>
     </div>
 
-    <h2 id='modules' class='section-header'><a href="#modules">Classes</a></h2>
+    <h2 id='modules' class='section-header'><a href="#modules">Классы</a></h2>
     <table>
         <tr>
             <td>
@@ -109,8 +105,8 @@
                 <a class='mod' href='Aura/index.html'>Aura</a>
             </td>
             <td class='docblock short'>
-                <p>The persistent effect of a <a class="mod" href="Spell/index.html">Spell</a> that remains on a <a class="mod" href="Unit/index.html">Unit</a> after the <a class="mod" href="Spell/index.html">Spell</a>
-has been cast.</p>
+                <p>Эффект <a class="mod" href="Spell/index.html">Заклинания</a> который остается на <a class="mod" href="Unit/index.html">Юните</a> после того как <a class="mod" href="Spell/index.html">Заклинание</a>
+было использовано.</p>
             </td>
         </tr>
         <tr>
@@ -119,7 +115,7 @@ has been cast.</p>
                 <a class='mod' href='BattleGround/index.html'>BattleGround</a>
             </td>
             <td class='docblock short'>
-                <p>Contains the state of a battleground, e.g. Warsong Gulch, Arathi Basin, etc.</p>
+                <p>Содержит состояния для полей сражений.</p>
             </td>
         </tr>
         <tr>
@@ -128,7 +124,7 @@ has been cast.</p>
                 <a class='mod' href='Corpse/index.html'>Corpse</a>
             </td>
             <td class='docblock short'>
-                <p>The remains of a <a class="mod" href="Player/index.html">Player</a> that has died.</p>
+                <p>Состояние, когда <a class="mod" href="Player/index.html">Игрок</a> умер.</p>
             </td>
         </tr>
         <tr>
@@ -137,7 +133,7 @@ has been cast.</p>
                 <a class='mod' href='Creature/index.html'>Creature</a>
             </td>
             <td class='docblock short'>
-                <p>Non-<a class="mod" href="Player/index.html">Player</a> controlled <a class="mod" href="Unit/index.html">Unit</a>s (i.e. NPCs).</p>
+                <a class="mod" href="Unit/index.html">Юниты</a> не контролируемые <a class="mod" href="Player/index.html">Игроком</a> (т.е. NPC).</p>
             </td>
         </tr>
         <tr>
@@ -146,7 +142,7 @@ has been cast.</p>
                 <a class='mod' href='ElunaQuery/index.html'>ElunaQuery</a>
             </td>
             <td class='docblock short'>
-                <p>The result of a database query.</p>
+                <p>Результат запроса к базе данных.</p>
             </td>
         </tr>
         <tr>
@@ -155,7 +151,7 @@ has been cast.</p>
                 <a class='mod' href='GameObject/index.html'>GameObject</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: <a class="mod" href="Object/index.html">Object</a>, <a class="mod" href="WorldObject/index.html">WorldObject</a></p>
+                <p>Наследует все методы от: <a class="mod" href="Object/index.html">Объект</a>, <a class="mod" href="WorldObject/index.html">Мировой Объект</a></p>
             </td>
         </tr>
         <tr>
@@ -164,7 +160,7 @@ has been cast.</p>
                 <a class='mod' href='Global/index.html'>Global</a>
             </td>
             <td class='docblock short'>
-                <p>These functions can be used anywhere at any time, including at start-up.</p>
+                <p>Эти функции можно использовать в любом месте и в любое время, в том числе при запуске.</p>
             </td>
         </tr>
         <tr>
@@ -173,7 +169,7 @@ has been cast.</p>
                 <a class='mod' href='Group/index.html'>Group</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: none</p>
+                <p>Наследует все методы от: нету</p>
             </td>
         </tr>
         <tr>
@@ -182,7 +178,7 @@ has been cast.</p>
                 <a class='mod' href='Guild/index.html'>Guild</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: none</p>
+                <p>Наследует все методы от: нету</p>
             </td>
         </tr>
         <tr>
@@ -191,7 +187,7 @@ has been cast.</p>
                 <a class='mod' href='Item/index.html'>Item</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: <a class="mod" href="Object/index.html">Object</a></p>
+                <p>Наследует все методы от: <a class="mod" href="Object/index.html">Объект</a></p>
             </td>
         </tr>
         <tr>
@@ -200,7 +196,7 @@ has been cast.</p>
                 <a class='mod' href='Map/index.html'>Map</a>
             </td>
             <td class='docblock short'>
-                <p>A game map, e.g. Azeroth, Eastern Kingdoms, the Molten Core, etc.</p>
+                <p>Игровая карта, например, Азерот, Восточные королевства и т.д.</p>
             </td>
         </tr>
         <tr>
@@ -209,7 +205,7 @@ has been cast.</p>
                 <a class='mod' href='Object/index.html'>Object</a>
             </td>
             <td class='docblock short'>
-                <p>A basic game object (either an <a class="mod" href="Item/index.html">Item</a> or a <a class="mod" href="WorldObject/index.html">WorldObject</a>).</p>
+                <p>Базовый игровой объект (либо <a class="mod" href="Item/index.html">Предмет</a>, либо <a class="mod" href="WorldObject/index.html">Мировой Объект</a>).</p>
             </td>
         </tr>
         <tr>
@@ -218,7 +214,7 @@ has been cast.</p>
                 <a class='mod' href='Player/index.html'>Player</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: <a class="mod" href="Object/index.html">Object</a>, <a class="mod" href="WorldObject/index.html">WorldObject</a>, <a class="mod" href="Unit/index.html">Unit</a></p>
+                <p>Наследует все методы от: <a class="mod" href="Object/index.html">Объект</a>, <a class="mod" href="WorldObject/index.html">Мировой Объект</a>, <a class="mod" href="Unit/index.html">Юнит</a></p>
             </td>
         </tr>
         <tr>
@@ -227,7 +223,7 @@ has been cast.</p>
                 <a class='mod' href='Quest/index.html'>Quest</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: none</p>
+                <p>Наследует все методы от: нету</p>
             </td>
         </tr>
         <tr>
@@ -236,7 +232,7 @@ has been cast.</p>
                 <a class='mod' href='Spell/index.html'>Spell</a>
             </td>
             <td class='docblock short'>
-                <p>An instance of a spell, created when the spell is cast by a <a class="mod" href="Unit/index.html">Unit</a>.</p>
+                <p>Экземпляр заклинания, создаваемый, когда заклинание произносится <a class="mod" href="Unit/index.html">Юнитом</a>.</p>
             </td>
         </tr>
         <tr>
@@ -245,7 +241,7 @@ has been cast.</p>
                 <a class='mod' href='Unit/index.html'>Unit</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: <a class="mod" href="Object/index.html">Object</a>, <a class="mod" href="WorldObject/index.html">WorldObject</a></p>
+                <p>Наследует все методы от: <a class="mod" href="Object/index.html">Объект</a>, <a class="mod" href="WorldObject/index.html">Мировой Объект</a></p>
             </td>
         </tr>
         <tr>
@@ -254,7 +250,7 @@ has been cast.</p>
                 <a class='mod' href='Vehicle/index.html'>Vehicle</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: none</p>
+                <p>Наследует все методы от: нету</p>
             </td>
         </tr>
         <tr>
@@ -263,7 +259,7 @@ has been cast.</p>
                 <a class='mod' href='WorldObject/index.html'>WorldObject</a>
             </td>
             <td class='docblock short'>
-                <p>Inherits all methods from: <a class="mod" href="Object/index.html">Object</a></p>
+                <p>Наследует все методы от: <a class="mod" href="Object/index.html">Объект</a></p>
             </td>
         </tr>
         <tr>
@@ -272,7 +268,7 @@ has been cast.</p>
                 <a class='mod' href='WorldPacket/index.html'>WorldPacket</a>
             </td>
             <td class='docblock short'>
-                <p>A packet used to pass messages between the server and a client.</p>
+                <p>Пакет, используемый для передачи сообщений между сервером и клиентом.</p>
             </td>
         </tr>
     </table>
@@ -285,30 +281,30 @@ has been cast.</p>
 
 <div id="help" class="hidden">
     <div class="shortcuts">
-        <h1>Keyboard shortcuts</h1>
+        <h1>Сочетания клавиш</h1>
         <dl>
             <dt>?</dt>
-            <dd>Show this help dialog</dd>
+            <dd>Показать окно помощи</dd>
             <dt>S</dt>
-            <dd>Focus the search field</dd>
+            <dd>Фокус на поиске</dd>
             <dt>&larrb;</dt>
-            <dd>Move up in search results</dd>
+            <dd>Листать результаты вверх</dd>
             <dt>&rarrb;</dt>
-            <dd>Move down in search results</dd>
+            <dd>Листать результаты вниз</dd>
             <dt>&#9166;</dt>
-            <dd>Go to active search result</dd>
+            <dd>Перейти к выбранному результату</dd>
         </dl>
     </div>
     <div class="infos">
-        <h1>Search tricks</h1>
+        <h1>Поисковые приемы</h1>
         <p>
-            Prefix searches with a type followed by a colon (e.g.
-            <code>fn:</code>) to restrict the search to a given type.
+            Префикс поиска с типом, за которым следует двоеточие (напр.
+            <code>fn:</code>) чтобы ограничить поиск заданным типом.
         </p>
         <p>
-            Accepted types are: <code>fn</code>, <code>mod</code>,
-            <code>struct</code> (or <code>str</code>), <code>enum</code>,
-            <code>trait</code>, <code>typedef</code> (or
+            Принимаются следующие типы: <code>fn</code>, <code>mod</code>,
+            <code>struct</code> (или <code>str</code>), <code>enum</code>,
+            <code>trait</code>, <code>typedef</code> (или
             <code>tdef</code>).
         </p>
     </div>
@@ -320,7 +316,7 @@ has been cast.</p>
 <script src="static/jquery.js"></script>
 <script src="static/main.js"></script>
 <script async src="search-index.js"></script>
-<center>Generated on <script src="date.js"></script></center>
+<center>Сгенерировано <script src="date.js"></script></center>
 <center>&copy; 2010 - 2024 Eluna Lua Engine</center>
 </body>
 </html>
